@@ -170,8 +170,10 @@
 
   /* ── Lightbox ── */
   function openLightbox(index) {
+    const currentTiles = Array.from(track.querySelectorAll('.gallery-tile:not([aria-hidden])'));
+    if (!currentTiles.length) return;
     currentLbIndex = index;
-    const tile = tiles[index];
+    const tile = currentTiles[index] || currentTiles[0];
     const src  = tile.getAttribute('data-src') || '';
     const cap  = tile.getAttribute('data-caption') || '';
     lightboxImg.src  = src;
@@ -180,7 +182,7 @@
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
     if (lbPrevBtn) lbPrevBtn.style.opacity = index === 0 ? '0.35' : '1';
-    if (lbNextBtn) lbNextBtn.style.opacity = index === tiles.length - 1 ? '0.35' : '1';
+    if (lbNextBtn) lbNextBtn.style.opacity = index === currentTiles.length - 1 ? '0.35' : '1';
   }
 
   function closeLightbox() {
@@ -189,8 +191,13 @@
     setTimeout(() => { lightboxImg.src = ''; }, 350);
   }
 
-  function showLbNext() { if (currentLbIndex < tiles.length - 1) openLightbox(currentLbIndex + 1); }
-  function showLbPrev() { if (currentLbIndex > 0) openLightbox(currentLbIndex - 1); }
+  function showLbNext() {
+    const currentTiles = Array.from(track.querySelectorAll('.gallery-tile:not([aria-hidden])'));
+    if (currentLbIndex < currentTiles.length - 1) openLightbox(currentLbIndex + 1);
+  }
+  function showLbPrev() {
+    if (currentLbIndex > 0) openLightbox(currentLbIndex - 1);
+  }
 
   // Click on any tile (real or clone) opens lightbox at its index
   track.addEventListener('click', (e) => {
@@ -228,6 +235,106 @@
       }, 2500);
     }, { passive: true });
   }
+
+  /* ── RENDER DINAMICO DA data/galleria.json (Sincronizzato col CMS) ── */
+  fetch('data/galleria.json')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => {
+      if (!data || !Array.isArray(data.items) || !data.items.length) return;
+      
+      const buildTile = (item, idx, isClone = false) => `
+        <div class="gallery-tile" ${isClone ? 'aria-hidden="true"' : ''} data-src="${item.image}" data-caption="${item.title}" data-index="${idx}">
+          <img src="${item.image}" alt="${item.title}" loading="lazy" />
+          <div class="gallery-tile-overlay">
+            <p class="gallery-tile-title">${item.title}</p>
+            <p class="gallery-tile-desc">${item.desc || ''}</p>
+          </div>
+          <span class="gallery-tile-tag">${item.tag || 'Lavoro'}</span>
+          <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+        </div>
+      `;
+
+      const setA = data.items.map((it, i) => buildTile(it, i, false)).join('');
+      const setB = data.items.map((it, i) => buildTile(it, i, true)).join('');
+      track.innerHTML = setA + setB;
+    })
+    .catch(() => {
+      // Usa il markup HTML statico di fallback
+    });
+})();
+
+
+/* ─── 5B. RENDER DINAMICO SERVIZI & ORARI DA JSON ─── */
+(function initDynamicData() {
+  // 1. Carica Servizi dinamici da data/servizi.json
+  const servicesGrid = document.querySelector('.services-grid');
+  if (servicesGrid) {
+    fetch('data/servizi.json')
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => {
+        if (!data || !Array.isArray(data.items) || !data.items.length) return;
+
+        const iconMap = {
+          'Taglio & Styling': 'fa-cut',
+          'Colorazione': 'fa-palette',
+          'Balayage': 'fa-magic',
+          'Cheratina & Stiratura': 'fa-spa',
+          'Extension': 'fa-layer-group',
+          'Permanente': 'fa-wind',
+          'Specialist Ricci': 'fa-circle-notch',
+          'Acconciature Cerimonia': 'fa-crown',
+          'Trattamenti Curativi': 'fa-leaf'
+        };
+
+        servicesGrid.innerHTML = data.items.map((s, idx) => {
+          const icon = iconMap[s.name] || 'fa-star';
+          const isFeatured = s.popular ? 'featured' : '';
+          const badge = s.popular ? '<div class="service-badge-featured">★ Più richiesto</div>' : '';
+          const cleanName = encodeURIComponent(s.name);
+          return `
+            <div class="service-card ${isFeatured}" data-aos="fade-up" data-aos-delay="${(idx % 4) * 80}">
+              ${badge}
+              <div class="service-icon-wrapper">
+                <i class="fas ${icon}"></i>
+              </div>
+              <h3 class="service-name">${s.name}</h3>
+              <p class="service-desc">${s.desc}</p>
+              <div class="service-price">${s.price}</div>
+              <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20informazioni%20su%20${cleanName}." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+            </div>
+          `;
+        }).join('');
+      })
+      .catch(() => {});
+  }
+
+  // 2. Carica Info, Orari & P.IVA da data/info.json
+  fetch('data/info.json')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(info => {
+      if (!info) return;
+      const pivaEl = document.getElementById('footer-piva');
+      if (pivaEl && info.piva) {
+        pivaEl.textContent = 'P.IVA: ' + info.piva;
+      }
+      if (info.hours) {
+        const hoursList = document.querySelector('.footer-hours-list');
+        if (hoursList) {
+          const h = info.hours;
+          hoursList.innerHTML = `
+            <li class="${h.mon === 'Chiuso' ? 'closed' : ''}"><span class="day">Lunedì</span><span class="hours">${h.mon}</span></li>
+            <li class="${h.tue === 'Chiuso' ? 'closed' : ''}"><span class="day">Martedì</span><span class="hours">${h.tue}</span></li>
+            <li class="${h.wed === 'Chiuso' ? 'closed' : ''}"><span class="day">Mercoledì</span><span class="hours">${h.wed}</span></li>
+            <li class="${h.thu === 'Chiuso' ? 'closed' : ''}"><span class="day">Giovedì</span><span class="hours">${h.thu}</span></li>
+            <li class="${h.fri === 'Chiuso' ? 'closed' : ''}"><span class="day">Venerdì</span><span class="hours">${h.fri}</span></li>
+            <li class="highlight"><span class="day">Sabato</span><span class="hours">${h.sat}</span></li>
+            <li class="${h.sun === 'Chiuso' ? 'closed' : ''}"><span class="day">Domenica</span><span class="hours">${h.sun}</span></li>
+            ${h.notice ? `<li style="color:var(--color-gold); font-size:0.8rem; margin-top:0.5rem;"><i class="fas fa-bullhorn"></i> ${h.notice}</li>` : ''}
+          `;
+        }
+      }
+    })
+    .catch(() => {});
 })();
 
 
