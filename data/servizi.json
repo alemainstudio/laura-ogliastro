@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "name": "Balayage",
+      "price": "da 80€",
+      "desc": "La tecnica solare che illumina il tuo viso. Sfumature naturali personalizzate per ogni carnagione.",
+      "popular": true
+    },
+    {
       "name": "Taglio & Styling",
       "price": "da 25€",
       "desc": "Taglio personalizzato su capelli lisci, mossi o ricci. Blow-dry e messa in piega inclusi.",
@@ -11,12 +17,6 @@
       "price": "da 40€",
       "desc": "Tinta, ricrescita, colorazione completa con prodotti di alta qualità, rispettosi del capello.",
       "popular": false
-    },
-    {
-      "name": "Balayage",
-      "price": "da 80€",
-      "desc": "La tecnica solare che illumina il tuo viso. Sfumature naturali personalizzate per ogni carnagione.",
-      "popular": true
     },
     {
       "name": "Cheratina & Stiratura",
