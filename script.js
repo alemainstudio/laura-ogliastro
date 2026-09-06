@@ -292,7 +292,7 @@
           const badge = s.popular ? '<div class="service-badge-featured">★ Più richiesto</div>' : '';
           const cleanName = encodeURIComponent(s.name);
           return `
-            <div class="service-card ${isFeatured}" data-aos="fade-up" data-aos-delay="${(idx % 4) * 80}">
+            <div class="service-card ${isFeatured} aos-animate" data-aos="fade-up">
               ${badge}
               <div class="service-icon-wrapper">
                 <i class="fas ${icon}"></i>
