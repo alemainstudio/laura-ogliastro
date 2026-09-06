@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "name": "Taglio & Styling",
+      "price": "da 25€",
+      "desc": "Taglio personalizzato su capelli lisci, mossi o ricci. Blow-dry e messa in piega inclusi.",
+      "popular": false
+    },
+    {
+      "name": "Colorazione",
+      "price": "da 40€",
+      "desc": "Tinta, ricrescita, colorazione completa con prodotti di alta qualità, rispettosi del capello.",
+      "popular": false
+    },
+    {
+      "name": "Balayage",
+      "price": "da 80€",
+      "desc": "La tecnica solare che illumina il tuo viso. Sfumature naturali personalizzate per ogni carnagione.",
+      "popular": true
+    },
+    {
+      "name": "Cheratina & Stiratura",
+      "price": "da 120€",
+      "desc": "Trattamento alla cheratina e stiratura permanente per un capello morbido, lucido e disciplinato per mesi.",
+      "popular": false
+    },
+    {
+      "name": "Extension",
+      "price": "da 150€",
+      "desc": "Allungamento e infoltimento con extension naturali di prima qualità. Consulenza gratuita inclusa.",
+      "popular": false
+    },
+    {
+      "name": "Permanente",
+      "price": "da 70€",
+      "desc": "Onde e ricci duraturi con le tecniche più moderne. Risultato morbido e naturale senza danneggiare il capello.",
+      "popular": false
+    },
+    {
+      "name": "Specialist Ricci",
+      "price": "da 35€",
+      "desc": "Taglio e cura specializzata per capelli ricci e mossi. Defrisage, diffusore, e definizione dei ricci al top.",
+      "popular": false
+    },
+    {
+      "name": "Acconciature Cerimonia",
+      "price": "da 50€",
+      "desc": "Acconciature per sposa, cerimonia, comunione e bambine. Ogni occasione speciale merita il massimo.",
+      "popular": false
+    },
+    {
+      "name": "Trattamenti Curativi",
+      "price": "da 20€",
+      "desc": "Maschere nutrienti, trattamenti ristrutturanti e anticaduta. Prendersi cura della salute del capello.",
+      "popular": false
+    }
+  ]
+}

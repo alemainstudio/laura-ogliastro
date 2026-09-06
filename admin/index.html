@@ -12,6 +12,11 @@
   <!-- Decap CMS Core -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
+    // Registra lo stile per limitare la dimensione delle immagini nell'anteprima
+    if (window.CMS) {
+      CMS.registerPreviewStyle("admin.css");
+    }
+
     // Reindirizza l'utente alla home una volta effettuato il logout o se aperto da invite email
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
