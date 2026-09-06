@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- =============================================
+       Laura Ogliastro – Benessere e Bellezza per i Tuoi Capelli
+       Sito Vetrina | Ficarazzi (Palermo)
+       Sviluppato con HTML5, CSS3 e JavaScript Vanilla
+  ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Laura Ogliastro – Salone di parrucchiere a Ficarazzi (Palermo). Specializzata in balayage, taglio ricci, cheratina, extension e acconciature. Prenota ora su WhatsApp!" />
+  <meta name="keywords" content="parrucchiere Ficarazzi, parrucchiere Palermo, balayage, cheratina, extension capelli, Laura Ogliastro" />
+  <meta property="og:title" content="Laura Ogliastro – Parrucchiere a Ficarazzi" />
+  <meta property="og:description" content="Benessere e bellezza per i tuoi capelli. Salone d'eccellenza a Ficarazzi, Palermo." />
+  <meta property="og:type" content="website" />
+
+  <title>Laura Ogliastro – Parrucchiere a Ficarazzi (Palermo)</title>
+
+  <!-- Google Fonts: Cormorant Garamond (elegante) + DM Sans (leggibile) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome per le icone -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Foglio di stile principale -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =============================================
+       NAVIGATION BAR
+  ============================================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">✦</span>
+        <div class="logo-text">
+          <span class="logo-name">Laura Ogliastro</span>
+          <span class="logo-tagline">Benessere &amp; Bellezza</span>
+        </div>
+      </div>
+
+      <!-- Navigation links (desktop) -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#chi-siamo">Chi Siamo</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#galleria">Galleria</a>
+        <a href="#recensioni">Recensioni</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+
+      <!-- CTA WhatsApp button (desktop) -->
+      <a
+        href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20appuntamento."
+        class="btn-whatsapp nav-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+        id="nav-whatsapp-btn"
+        aria-label="Prenota su WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <span>Prenota</span>
+      </a>
+
+      <!-- Hamburger menu (mobile) -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Apri menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav-links">
+        <a href="#chi-siamo" class="mobile-link">Chi Siamo</a>
+        <a href="#servizi" class="mobile-link">Servizi</a>
+        <a href="#galleria" class="mobile-link">Galleria</a>
+        <a href="#recensioni" class="mobile-link">Recensioni</a>
+        <a href="#contatti" class="mobile-link">Contatti</a>
+        <a
+          href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20appuntamento."
+          class="btn-whatsapp mobile-whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="mobile-whatsapp-btn"
+        >
+          <i class="fab fa-whatsapp"></i> Prenota su WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- =============================================
+       HERO SECTION
+  ============================================= -->
+  <section class="hero" id="hero">
+    <!-- Overlay sfumato -->
+    <div class="hero-overlay"></div>
+
+    <!-- Particelle decorative -->
+    <div class="hero-particles">
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+    </div>
+
+    <div class="hero-content">
+      <!-- Pill badge -->
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Salone a Ficarazzi, Palermo
+      </div>
+
+      <h1 class="hero-title">
+        Il tuo capello,<br />
+        <em>la nostra passione.</em>
+      </h1>
+
+      <p class="hero-subtitle">
+        Taglio, colore, balayage, cheratina e acconciature da cerimonia.<br />
+        Ogni visita è un'esperienza di benessere pensata per te.
+      </p>
+
+      <!-- Rating stars -->
+      <div class="hero-rating">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <span>4.9 / 5 &nbsp;·&nbsp; Oltre 80 recensioni verificate</span>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="hero-cta">
+        <a
+          href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20appuntamento."
+          class="btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="hero-whatsapp-btn"
+        >
+          <i class="fab fa-whatsapp"></i>
+          Prenota ora su WhatsApp
+        </a>
+        <a href="#servizi" class="btn-secondary" id="hero-services-btn">
+          Scopri i Servizi
+          <i class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       STRIP – NUMERI DEL SALONE
+  ============================================= -->
+  <section class="stats-strip" aria-label="Numeri del salone">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-number" data-target="80">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Recensioni ⭐ 4.9</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Anni di Esperienza</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Servizi Offerti</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+        <span class="stat-label">Clienti Soddisfatte</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CHI SIAMO
+  ============================================= -->
+  <section class="about" id="chi-siamo">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Immagine con frame decorativo -->
+        <div class="about-image-wrapper" data-aos="fade-right">
+          <div class="about-image-frame">
+            <img
+              src="images/salone-interno.png"
+              alt="Interno del salone Laura Ogliastro a Ficarazzi"
+              class="about-img"
+              loading="lazy"
+            />
+            <!-- Badge experience -->
+            <div class="experience-badge">
+              <span class="exp-number">4.9</span>
+              <span class="exp-label">Stelle su Fresha</span>
+            </div>
+          </div>
+          <!-- Decorazione floreale -->
+          <div class="about-decor">✦</div>
+        </div>
+
+        <!-- Testo -->
+        <div class="about-text" data-aos="fade-left">
+          <div class="section-label">Chi Siamo</div>
+          <h2 class="section-title">Un salone dove ogni capello<br /><em>racconta una storia.</em></h2>
+          <p class="about-description">
+            Benvenuta da <strong>Laura Ogliastro</strong>, il salone di bellezza del Corso Umberto I
+            di Ficarazzi dove trovi professionalità, calore e passione per i capelli.
+          </p>
+          <p class="about-description">
+            La nostra filosofia è semplice: <em>ascoltare</em> ogni cliente, valorizzare
+            la bellezza naturale di ogni capello e offrire trattamenti di qualità
+            con prodotti selezionati. Che tu voglia un colore vibrante, un balayage solare
+            o un taglio perfetto per i tuoi ricci, sei nel posto giusto.
+          </p>
+          <p class="about-description">
+            Ci prendiamo cura di te anche per le grandi occasioni — acconciature da cerimonia,
+            sposa, comunione e non solo — perché ogni momento speciale merita il massimo.
+          </p>
+
+          <!-- Features -->
+          <ul class="about-features">
+            <li><i class="fas fa-check-circle"></i> Specializzate nei capelli ricci</li>
+            <li><i class="fas fa-check-circle"></i> Prodotti professionali selezionati</li>
+            <li><i class="fas fa-check-circle"></i> Acconciature da cerimonia e sposa</li>
+            <li><i class="fas fa-check-circle"></i> Ambiente accogliente e familiare</li>
+          </ul>
+
+          <a href="tel:+390916360956" class="btn-outline" id="about-phone-btn">
+            <i class="fas fa-phone"></i>
+            Chiamaci: 091 636 0956
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SERVIZI / LISTINO
+  ============================================= -->
+  <section class="services" id="servizi">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">I Nostri Servizi</div>
+        <h2 class="section-title">Un trattamento pensato<br /><em>solo per te.</em></h2>
+        <p class="section-subtitle">
+          Esplora la nostra gamma completa di servizi per capelli.<br />
+          I prezzi sono indicativi — contattaci per un preventivo personalizzato.
+        </p>
+      </div>
+
+      <!-- Grid servizi -->
+      <div class="services-grid">
+
+        <!-- Taglio -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-cut"></i>
+          </div>
+          <h3 class="service-name">Taglio & Styling</h3>
+          <p class="service-desc">
+            Taglio personalizzato su capelli lisci, mossi o ricci.
+            Blow-dry e messa in piega inclusi.
+          </p>
+          <div class="service-price">da <strong>25€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20taglio." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+        <!-- Colore -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="service-name">Colorazione</h3>
+          <p class="service-desc">
+            Tinta, ricrescita, colorazione completa con prodotti di alta qualità,
+            rispettosi del capello.
+          </p>
+          <div class="service-price">da <strong>40€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20una%20colorazione." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+        <!-- Balayage -->
+        <div class="service-card featured" data-aos="fade-up" data-aos-delay="160">
+          <div class="service-badge-featured">★ Più richiesto</div>
+          <div class="service-icon-wrapper">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3 class="service-name">Balayage</h3>
+          <p class="service-desc">
+            La tecnica solare che illumina il tuo viso. Sfumature naturali
+            personalizzate per ogni carnagione.
+          </p>
+          <div class="service-price">da <strong>80€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20balayage." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+        <!-- Cheratina -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-spa"></i>
+          </div>
+          <h3 class="service-name">Cheratina & Stiratura</h3>
+          <p class="service-desc">
+            Trattamento alla cheratina e stiratura permanente per un capello
+            morbido, lucido e disciplinato per mesi.
+          </p>
+          <div class="service-price">da <strong>120€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20trattamento%20alla%20cheratina." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+        <!-- Extension -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3 class="service-name">Extension</h3>
+          <p class="service-desc">
+            Allungamento e infoltimento con extension naturali di prima qualità.
+            Consulenza gratuita inclusa.
+          </p>
+          <div class="service-price">da <strong>150€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20informazioni%20sulle%20extension." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+        <!-- Permanente -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-wind"></i>
+          </div>
+          <h3 class="service-name">Permanente</h3>
+          <p class="service-desc">
+            Onde e ricci duraturi con le tecniche più moderne.
+            Risultato morbido e naturale senza danneggiare il capello.
+          </p>
+          <div class="service-price">da <strong>70€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20una%20permanente." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+        <!-- Capelli Ricci -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="480">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-circle-notch"></i>
+          </div>
+          <h3 class="service-name">Specialist Ricci</h3>
+          <p class="service-desc">
+            Taglio e cura specializzata per capelli ricci e mossi.
+            Defrisage, diffusore, e definizione dei ricci al top.
+          </p>
+          <div class="service-price">da <strong>35€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20appuntamento%20per%20capelli%20ricci." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+        <!-- Cerimonie -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="560">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-crown"></i>
+          </div>
+          <h3 class="service-name">Acconciature Cerimonia</h3>
+          <p class="service-desc">
+            Acconciature per sposa, cerimonia, comunione e bambine.
+            Ogni occasione speciale merita il massimo.
+          </p>
+          <div class="service-price">da <strong>50€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%27acconciatura%20da%20cerimonia." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+        <!-- Trattamenti Curativi -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="640">
+          <div class="service-icon-wrapper">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="service-name">Trattamenti Curativi</h3>
+          <p class="service-desc">
+            Maschere nutrienti, trattamenti ristrutturanti e anticaduta.
+            Prendersi cura della salute del capello prima ancora che della sua bellezza.
+          </p>
+          <div class="service-price">da <strong>20€</strong></div>
+          <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20informazioni%20sui%20trattamenti%20curativi." class="service-cta" target="_blank" rel="noopener noreferrer">Prenota →</a>
+        </div>
+
+      </div>
+
+      <!-- CTA Listino note -->
+      <p class="services-note">
+        * I prezzi sono indicativi e possono variare in base alla lunghezza del capello e al trattamento specifico.
+        Contattaci per un preventivo gratuito e personalizzato.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       GALLERIA CAROUSEL (LARGE AUTO-SLIDING SHOWCASE)
+  ============================================= -->
+  <section class="gallery" id="galleria">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Galleria Ispirazioni</div>
+        <h2 class="section-title">I nostri lavori sui capelli<br /><em>parlano per noi.</em></h2>
+        <p class="section-subtitle">
+          Esplora i tagli, i colori e le trasformazioni reali eseguite nel salone Laura Ogliastro a Ficarazzi.<br />
+          Clicca su qualsiasi foto per ingrandirla a schermo intero!
+        </p>
+      </div>
+
+      <!-- ── Infinite Marquee Gallery ── -->
+      <!-- outer wrapper clips overflow & adds fade edges -->
+      <div class="gallery-marquee-outer" id="gallery-marquee-outer">
+        <!-- gallery-marquee-track contains tiles × 2 for seamless loop -->
+        <div class="gallery-marquee-track" id="gallery-track">
+
+          <!-- SET A (originals) -->
+          <div class="gallery-tile" data-src="images/balayage-schiariture-lisci.png" data-caption="Balayage &amp; Schiariture su Capelli Lisci Lunghi" data-index="0">
+            <img src="images/balayage-schiariture-lisci.png" alt="Balayage e schiariture su capelli lisci lunghi" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Balayage su Lisci Lunghi</p>
+              <p class="gallery-tile-desc">Schiariture tridimensionali naturali</p>
+            </div>
+            <span class="gallery-tile-tag">Balayage</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" data-src="images/rosso-arancio-liscio.jpg" data-caption="Colorazione Rosso Arancio Vibrante su Capelli Lisci" data-index="1">
+            <img src="images/rosso-arancio-liscio.jpg" alt="Colorazione rosso arancio vibrante" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Rosso Arancio Vibrante</p>
+              <p class="gallery-tile-desc">Colorazione intensa con finish setoso</p>
+            </div>
+            <span class="gallery-tile-tag">Colorazione</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" data-src="images/ricci-biondi-mossi.jpg" data-caption="Ricci Biondi Mossi con Schiariture Caramello" data-index="2">
+            <img src="images/ricci-biondi-mossi.jpg" alt="Ricci biondi mossi con schiariture caramello" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Ricci Biondi con Schiariture</p>
+              <p class="gallery-tile-desc">Ricci voluminosi con highlights caramello</p>
+            </div>
+            <span class="gallery-tile-tag">Ricci &amp; Volume</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" data-src="images/biondo-onde-viso.jpg" data-caption="Biondo Solare con Onde Morbide" data-index="3">
+            <img src="images/biondo-onde-viso.jpg" alt="Capelli biondi lunghi con onde morbide" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Biondo Luminoso &amp; Onde</p>
+              <p class="gallery-tile-desc">Capelli biondi con piega ad onde naturali</p>
+            </div>
+            <span class="gallery-tile-tag">Styling</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" data-src="images/balayage-miele-onde.jpg" data-caption="Balayage Miele con Onde Professionali" data-index="4">
+            <img src="images/balayage-miele-onde.jpg" alt="Balayage miele dorato con piega ad onde" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Balayage Miele &amp; Onde</p>
+              <p class="gallery-tile-desc">Sfumature miele e piega professionale</p>
+            </div>
+            <span class="gallery-tile-tag">Balayage</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" data-src="images/blu-elettrico-treccia.jpg" data-caption="Colorazione Blu Elettrico con Treccia Laterale" data-index="5">
+            <img src="images/blu-elettrico-treccia.jpg" alt="Colorazione blu elettrico con treccia laterale" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Blu Elettrico &amp; Treccia</p>
+              <p class="gallery-tile-desc">Fantasy vibrante con acconciatura intrecciata</p>
+            </div>
+            <span class="gallery-tile-tag">Fantasy</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" data-src="images/raccolto-elegante-sposa.jpg" data-caption="Raccolto Elegante da Cerimonia" data-index="6">
+            <img src="images/raccolto-elegante-sposa.jpg" alt="Raccolto elegante da cerimonia capelli scuri" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Raccolto Cerimonia</p>
+              <p class="gallery-tile-desc">Raccolto elaborato per occasioni speciali</p>
+            </div>
+            <span class="gallery-tile-tag">Acconciature</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" data-src="images/sposa-ricci-perle.jpg" data-caption="Acconciatura Sposa Ricci con Perle" data-index="7">
+            <img src="images/sposa-ricci-perle.jpg" alt="Acconciatura sposa su capelli ricci con perle" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Acconciatura Sposa Ricci</p>
+              <p class="gallery-tile-desc">Raccolto romantico con perle</p>
+            </div>
+            <span class="gallery-tile-tag">Sposa</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" data-src="images/biondo-platino-ondulato.jpg" data-caption="Biondo Platino Schiarito con Onde Morbide" data-index="8">
+            <img src="images/biondo-platino-ondulato.jpg" alt="Biondo platino con onde morbide su capelli lunghi" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Platino &amp; Onde Luminose</p>
+              <p class="gallery-tile-desc">Schiariture fredde con piega elegante</p>
+            </div>
+            <span class="gallery-tile-tag">Schiariture</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <!-- SET B (duplicates for seamless infinite loop) -->
+          <div class="gallery-tile" aria-hidden="true" data-src="images/balayage-schiariture-lisci.png" data-caption="Balayage &amp; Schiariture su Capelli Lisci Lunghi" data-index="0">
+            <img src="images/balayage-schiariture-lisci.png" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Balayage su Lisci Lunghi</p>
+              <p class="gallery-tile-desc">Schiariture tridimensionali naturali</p>
+            </div>
+            <span class="gallery-tile-tag">Balayage</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" aria-hidden="true" data-src="images/rosso-arancio-liscio.jpg" data-caption="Colorazione Rosso Arancio Vibrante su Capelli Lisci" data-index="1">
+            <img src="images/rosso-arancio-liscio.jpg" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Rosso Arancio Vibrante</p>
+              <p class="gallery-tile-desc">Colorazione intensa con finish setoso</p>
+            </div>
+            <span class="gallery-tile-tag">Colorazione</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" aria-hidden="true" data-src="images/ricci-biondi-mossi.jpg" data-caption="Ricci Biondi Mossi con Schiariture Caramello" data-index="2">
+            <img src="images/ricci-biondi-mossi.jpg" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Ricci Biondi con Schiariture</p>
+              <p class="gallery-tile-desc">Ricci voluminosi con highlights caramello</p>
+            </div>
+            <span class="gallery-tile-tag">Ricci &amp; Volume</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" aria-hidden="true" data-src="images/biondo-onde-viso.jpg" data-caption="Biondo Solare con Onde Morbide" data-index="3">
+            <img src="images/biondo-onde-viso.jpg" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Biondo Luminoso &amp; Onde</p>
+              <p class="gallery-tile-desc">Capelli biondi con piega ad onde naturali</p>
+            </div>
+            <span class="gallery-tile-tag">Styling</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" aria-hidden="true" data-src="images/balayage-miele-onde.jpg" data-caption="Balayage Miele con Onde Professionali" data-index="4">
+            <img src="images/balayage-miele-onde.jpg" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Balayage Miele &amp; Onde</p>
+              <p class="gallery-tile-desc">Sfumature miele e piega professionale</p>
+            </div>
+            <span class="gallery-tile-tag">Balayage</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" aria-hidden="true" data-src="images/blu-elettrico-treccia.jpg" data-caption="Colorazione Blu Elettrico con Treccia Laterale" data-index="5">
+            <img src="images/blu-elettrico-treccia.jpg" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Blu Elettrico &amp; Treccia</p>
+              <p class="gallery-tile-desc">Fantasy vibrante con acconciatura intrecciata</p>
+            </div>
+            <span class="gallery-tile-tag">Fantasy</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" aria-hidden="true" data-src="images/raccolto-elegante-sposa.jpg" data-caption="Raccolto Elegante da Cerimonia" data-index="6">
+            <img src="images/raccolto-elegante-sposa.jpg" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Raccolto Cerimonia</p>
+              <p class="gallery-tile-desc">Raccolto elaborato per occasioni speciali</p>
+            </div>
+            <span class="gallery-tile-tag">Acconciature</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" aria-hidden="true" data-src="images/sposa-ricci-perle.jpg" data-caption="Acconciatura Sposa Ricci con Perle" data-index="7">
+            <img src="images/sposa-ricci-perle.jpg" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Acconciatura Sposa Ricci</p>
+              <p class="gallery-tile-desc">Raccolto romantico con perle</p>
+            </div>
+            <span class="gallery-tile-tag">Sposa</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <div class="gallery-tile" aria-hidden="true" data-src="images/biondo-platino-ondulato.jpg" data-caption="Biondo Platino Schiarito con Onde Morbide" data-index="8">
+            <img src="images/biondo-platino-ondulato.jpg" alt="" loading="lazy" />
+            <div class="gallery-tile-overlay">
+              <p class="gallery-tile-title">Platino &amp; Onde Luminose</p>
+              <p class="gallery-tile-desc">Schiariture fredde con piega elegante</p>
+            </div>
+            <span class="gallery-tile-tag">Schiariture</span>
+            <div class="gallery-tile-zoom"><i class="fas fa-expand"></i></div>
+          </div>
+
+        </div><!-- /gallery-marquee-track -->
+      </div><!-- /gallery-marquee-outer -->
+
+      <!-- hint scroll -->
+      <p style="text-align:center; margin-top:1.25rem; font-size:0.8rem; color:var(--color-text-muted); letter-spacing:0.05em;">
+        <i class="fas fa-hand-pointer" style="margin-right:0.4em;"></i>Clicca su una foto per ingrandirla
+      </p>
+
+      <!-- Lightbox modal -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzazione immagine">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Chiudi">
+          <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Precedente">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Successivo">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+          <img src="" alt="" id="lightbox-img" />
+          <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       RECENSIONI (TESTIMONIALS)
+  ============================================= -->
+  <section class="reviews" id="recensioni">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Dicono di Noi</div>
+        <h2 class="section-title">Le nostre clienti<br /><em>sono la nostra voce.</em></h2>
+        <div class="reviews-rating-summary">
+          <div class="big-rating">4.9</div>
+          <div class="big-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="big-count">Basato su oltre 80 recensioni verificate su Fresha</div>
+        </div>
+      </div>
+
+      <!-- Slider recensioni -->
+      <div class="reviews-slider-wrapper">
+        <div class="reviews-track" id="reviews-track">
+
+          <!-- Recensione 1 -->
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Laura è una vera artista! Ho fatto il balayage e sono rimasta senza parole.
+              Ha capito esattamente quello che volevo e il risultato è stato ancora più bello
+              di quello che avevo immaginato. Il salone è accogliente e si respira un'aria
+              familiare. Tornerò sicuramente! 🌟"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">C</div>
+              <div class="review-info">
+                <span class="review-name">Claudia R.</span>
+                <span class="review-platform">
+                  <i class="fab fa-google"></i> Google · Cliente verificata
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recensione 2 -->
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Ho capelli ricci difficilissimi da gestire, e Laura è l'unica che riesce
+              a farli diventare meravigliosi. Il taglio è impeccabile, la cura per ogni
+              singolo riccio è straordinaria. Non andrò mai più da nessun altro parrucchiere!
+              Professionalità al 100%. ❤️"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">V</div>
+              <div class="review-info">
+                <span class="review-name">Valentina M.</span>
+                <span class="review-platform">
+                  <i class="fab fa-facebook"></i> Facebook · Cliente verificata
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recensione 3 -->
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Mi sono affidata a Laura per l'acconciatura del mio matrimonio e sono stata
+              la sposa più bella! Precisa, paziente e con un occhio estetico straordinario.
+              Tutte le mie invitate le hanno chiesto il numero! Grazie di cuore Laura! 👰✨"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">S</div>
+              <div class="review-info">
+                <span class="review-name">Sara F.</span>
+                <span class="review-platform">
+                  <i class="fab fa-google"></i> Google · Cliente verificata
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recensione 4 -->
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Ho fatto la cheratina e i miei capelli non sono mai stati così lucidi e
+              morbidi! Laura ha spiegato ogni passaggio, utilizzando prodotti di qualità.
+              Il risultato dura da mesi. Salone pulito, accogliente e personale gentilissimo.
+              Consigliatissimo! 💆‍♀️"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">M</div>
+              <div class="review-info">
+                <span class="review-name">Mariangela P.</span>
+                <span class="review-platform">
+                  <i class="fab fa-google"></i> Google · Cliente verificata
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recensione 5 -->
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Un salone fantastico nel cuore di Ficarazzi. Laura è bravissima e ascolta
+              davvero le esigenze di ogni cliente. Ho fatto le extension e sono stupenda,
+              semrano capelli veri! Prezzi onesti per una qualità eccellente.
+              Lo raccomando a tutte! 🙌"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">A</div>
+              <div class="review-info">
+                <span class="review-name">Antonella G.</span>
+                <span class="review-platform">
+                  <i class="fab fa-facebook"></i> Facebook · Cliente verificata
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recensione 6 (Facebook) -->
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Super professionale e simpatica! Ho fatto il trattamento di nanoplastia ed è stato la svolta per la salute dei miei capelli. Prodotti fantastici e grande attenzione per i dettagli. Consigliatissima a Ficarazzi! 💖"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">G</div>
+              <div class="review-info">
+                <span class="review-name">Giulia B.</span>
+                <span class="review-platform">
+                  <i class="fab fa-facebook"></i> Facebook · Cliente verificata
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recensione 7 (Facebook) -->
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Laura è fantastica, riesce sempre a soddisfare ogni mia richiesta sui toni del biondo e sulle sfumature! L'ambiente è super pulito e rilassante. Una garanzia a Ficarazzi! ✨"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">F</div>
+              <div class="review-info">
+                <span class="review-name">Federica S.</span>
+                <span class="review-platform">
+                  <i class="fab fa-facebook"></i> Facebook · Cliente verificata
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controlli slider -->
+        <div class="slider-controls">
+          <button class="slider-btn" id="slider-prev" aria-label="Recensione precedente">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <button class="slider-btn" id="slider-next" aria-label="Recensione successiva">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SEZIONE WHATSAPP / CTA CENTRALE
+  ============================================= -->
+  <section class="cta-banner">
+    <div class="cta-banner-content">
+      <div class="cta-icon-large"><i class="fab fa-whatsapp"></i></div>
+      <h2>Pronta per un nuovo look?</h2>
+      <p>Prenota il tuo appuntamento direttamente su WhatsApp.<br />Rispondo in pochi minuti!</p>
+      <a
+        href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20appuntamento."
+        class="btn-whatsapp-large"
+        target="_blank"
+        rel="noopener noreferrer"
+        id="cta-whatsapp-btn"
+      >
+        <i class="fab fa-whatsapp"></i>
+        Prenota ora su WhatsApp
+      </a>
+      <a href="tel:+390916360956" class="cta-phone-link">
+        <i class="fas fa-phone"></i> oppure chiama: 091 636 0956
+      </a>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER – CONTATTI & MAPPA
+  ============================================= -->
+  <footer class="footer" id="contatti">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Colonna 1 – Brand -->
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-icon">✦</span>
+              <div class="logo-text">
+                <span class="logo-name">Laura Ogliastro</span>
+                <span class="logo-tagline">Benessere &amp; Bellezza</span>
+              </div>
+            </div>
+            <p class="footer-brand-desc">
+              Salone di parrucchiere a Ficarazzi (Palermo).<br />
+              Specializzate in balayage, capelli ricci,<br />
+              cheratina, extension e cerimonie.
+            </p>
+            <!-- Social links -->
+            <div class="footer-social">
+              <a
+                href="https://www.facebook.com/lauraogliastroparrucchieri/?locale=it_IT"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="Facebook Laura Ogliastro"
+                id="footer-facebook-btn"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/laura_ogliastro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="Instagram Laura Ogliastro"
+                id="footer-instagram-btn"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/393713803346"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="WhatsApp Laura Ogliastro"
+                id="footer-whatsapp-btn"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Colonna 2 – Contatti -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Contatti</h3>
+            <ul class="footer-info-list">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Corso Umberto I, 271/273<br />90010 Ficarazzi (PA)</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+390916360956">091 636 0956</a>
+              </li>
+              <li>
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/393713803346" target="_blank" rel="noopener noreferrer">371 380 3346</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Colonna 3 – Orari -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Orari di Apertura</h3>
+            <ul class="footer-hours-list">
+              <li class="closed">
+                <span class="day">Lunedì</span>
+                <span class="hours">Chiuso</span>
+              </li>
+              <li>
+                <span class="day">Martedì</span>
+                <span class="hours">09:00 – 18:00</span>
+              </li>
+              <li>
+                <span class="day">Mercoledì</span>
+                <span class="hours">09:00 – 18:00</span>
+              </li>
+              <li>
+                <span class="day">Giovedì</span>
+                <span class="hours">09:00 – 18:00</span>
+              </li>
+              <li>
+                <span class="day">Venerdì</span>
+                <span class="hours">09:00 – 18:00</span>
+              </li>
+              <li class="highlight">
+                <span class="day">Sabato</span>
+                <span class="hours">08:30 – 19:30</span>
+              </li>
+              <li class="closed">
+                <span class="day">Domenica</span>
+                <span class="hours">Chiuso</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Colonna 4 – Quick links -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Navigazione</h3>
+            <ul class="footer-links-list">
+              <li><a href="#chi-siamo">Chi Siamo</a></li>
+              <li><a href="#servizi">I Nostri Servizi</a></li>
+              <li><a href="#galleria">Galleria Lavori</a></li>
+              <li><a href="#recensioni">Recensioni</a></li>
+              <li>
+                <a href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20appuntamento." target="_blank" rel="noopener noreferrer">
+                  📅 Prenota su WhatsApp
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Maps embed -->
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162!2d13.4632!3d38.0878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319ee4b9e9e9e9e%3A0x1234567890!2sCorso+Umberto+I%2C+271%2C+90010+Ficarazzi+PA!5e0!3m2!1sit!2sit!4v1600000000000!5m2!1sit!2sit"
+        width="100%"
+        height="320"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Posizione salone Laura Ogliastro su Google Maps"
+        aria-label="Mappa Google con la posizione del salone Laura Ogliastro a Ficarazzi"
+      ></iframe>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Laura Ogliastro – Benessere e Bellezza per i Tuoi Capelli. &nbsp;|&nbsp; <span id="footer-piva">P.IVA: Inserimento in corso</span> &nbsp;|&nbsp; <a href="#privacy" style="color:var(--color-gold); text-decoration:underline;">Privacy &amp; Cookie Policy</a></p>
+        <p class="footer-credits">Corso Umberto I, 271 – 90010 Ficarazzi (PA) | <a href="/admin/" style="color:rgba(255,255,255,0.4); text-decoration:none; font-size:0.75rem;" title="Accesso Gestione Salone">🔒 Area Riservata</a></p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Floating WhatsApp button (always visible on mobile) -->
+  <a
+    href="https://wa.me/393713803346?text=Ciao%20Laura!%20Vorrei%20prenotare%20un%20appuntamento."
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    id="floating-whatsapp-btn"
+    aria-label="Prenota su WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+    <span class="floating-tooltip">Prenota ora!</span>
+  </a>
+
+
+  <!-- JavaScript principale -->
+  <script src="script.js"></script>
+
+  <!-- Netlify Identity widget (necessario per completare la registrazione via email di Laura) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

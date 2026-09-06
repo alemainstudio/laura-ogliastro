@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "image": "images/balayage-schiariture-lisci.png",
+      "title": "Balayage Biondo Naturale & Piega Liscia",
+      "desc": "Sfumature luminose senza stacchi netti",
+      "tag": "Colorazione"
+    },
+    {
+      "image": "images/ricci-biondi-mossi.jpg",
+      "title": "Ricci Biondi con Schiariture",
+      "desc": "Ricci voluminosi con highlights caramello",
+      "tag": "Ricci & Volume"
+    },
+    {
+      "image": "images/biondo-onde-viso.jpg",
+      "title": "Biondo Luminoso & Onde",
+      "desc": "Capelli biondi con piega ad onde naturali",
+      "tag": "Styling"
+    },
+    {
+      "image": "images/balayage-miele-onde.jpg",
+      "title": "Balayage Miele & Onde",
+      "desc": "Sfumature miele e piega professionale",
+      "tag": "Balayage"
+    },
+    {
+      "image": "images/blu-elettrico-treccia.jpg",
+      "title": "Blu Elettrico & Treccia",
+      "desc": "Fantasy vibrante con acconciatura intrecciata",
+      "tag": "Fantasy"
+    },
+    {
+      "image": "images/raccolto-elegante-sposa.jpg",
+      "title": "Raccolto Cerimonia",
+      "desc": "Raccolto elaborato per occasioni speciali",
+      "tag": "Acconciature"
+    },
+    {
+      "image": "images/sposa-ricci-perle.jpg",
+      "title": "Acconciatura Sposa Ricci",
+      "desc": "Raccolto romantico con perle",
+      "tag": "Sposa"
+    },
+    {
+      "image": "images/biondo-platino-ondulato.jpg",
+      "title": "Platino & Onde Luminose",
+      "desc": "Schiariture fredde con piega elegante",
+      "tag": "Colorazione"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "whatsapp": "393713803346",
+  "phone_display": "+39 371 380 3346",
+  "address": "Corso Umberto I, 271 – 90010 Ficarazzi (PA)",
+  "piva": "",
+  "hours": {
+    "mon": "Chiuso",
+    "tue": "09:00 – 18:00",
+    "wed": "09:00 – 18:00",
+    "thu": "09:00 – 18:00",
+    "fri": "09:00 – 18:00",
+    "sat": "08:30 – 19:30",
+    "sun": "Chiuso",
+    "notice": ""
+  }
+}

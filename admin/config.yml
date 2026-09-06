@@ -1,0 +1,77 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: 'it'
+
+# Cartella di upload immagini
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  # -------------------------------------------------------------
+  # 1. GESTIONE GALLERIA FOTO
+  # -------------------------------------------------------------
+  - name: "galleria"
+    label: "Galleria Lavori"
+    files:
+      - file: "data/galleria.json"
+        label: "Foto Galleria"
+        name: "foto_galleria"
+        fields:
+          - label: "Elenco Foto Lavori"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.tag}})"
+            fields:
+              - { label: "Immagine", name: "image", widget: "image" }
+              - { label: "Titolo Foto", name: "title", widget: "string", hint: "Es: Balayage Miele & Onde" }
+              - { label: "Descrizione breve", name: "desc", widget: "string", hint: "Es: Sfumature calde su base castana" }
+              - { label: "Categoria / Etichetta", name: "tag", widget: "select", options: ["Balayage", "Colorazione", "Taglio & Piega", "Ricci & Volume", "Acconciature", "Sposa", "Trattamenti", "Fantasy"] }
+
+  # -------------------------------------------------------------
+  # 2. INFORMAZIONI GENERALI, ORARI E CONTATTI
+  # -------------------------------------------------------------
+  - name: "info"
+    label: "Info, Orari & Contatti"
+    files:
+      - file: "data/info.json"
+        label: "Dati Salone & Orari"
+        name: "dati_salone"
+        fields:
+          - { label: "Numero WhatsApp (formato internazionale)", name: "whatsapp", widget: "string", hint: "Es: 393713803346" }
+          - { label: "Telefono fisso/cellulare visibile", name: "phone_display", widget: "string", hint: "Es: +39 371 380 3346" }
+          - { label: "Indirizzo completo", name: "address", widget: "string" }
+          - { label: "Partita IVA", name: "piva", widget: "string", required: false, hint: "Es: 12345678901" }
+          - label: "Orari di Apertura"
+            name: "hours"
+            widget: "object"
+            fields:
+              - { label: "Lunedì", name: "mon", widget: "string", default: "Chiuso" }
+              - { label: "Martedì", name: "tue", widget: "string", default: "09:00 – 18:00" }
+              - { label: "Mercoledì", name: "wed", widget: "string", default: "09:00 – 18:00" }
+              - { label: "Giovedì", name: "thu", widget: "string", default: "09:00 – 18:00" }
+              - { label: "Venerdì", name: "fri", widget: "string", default: "09:00 – 18:00" }
+              - { label: "Sabato", name: "sat", widget: "string", default: "08:30 – 19:30" }
+              - { label: "Domenica", name: "sun", widget: "string", default: "Chiuso" }
+              - { label: "Avviso Chiusura Straordinaria / Ferie", name: "notice", widget: "string", required: false, hint: "Lascia vuoto se non ci sono ferie" }
+
+  # -------------------------------------------------------------
+  # 3. LISTINO SERVIZI E PREZZI
+  # -------------------------------------------------------------
+  - name: "servizi"
+    label: "Servizi e Listino Prezzi"
+    files:
+      - file: "data/servizi.json"
+        label: "Lista Servizi Offerti"
+        name: "servizi_listino"
+        fields:
+          - label: "Servizi"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}} ({{fields.price}})"
+            fields:
+              - { label: "Nome Servizio", name: "name", widget: "string" }
+              - { label: "Prezzo indicativo", name: "price", widget: "string", hint: "Es: da €45" }
+              - { label: "Descrizione", name: "desc", widget: "text" }
+              - { label: "In Evidenza / Più Richiesto", name: "popular", widget: "boolean", default: false }
