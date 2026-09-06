@@ -13,12 +13,6 @@
       "popular": false
     },
     {
-      "name": "Balayage",
-      "price": "da 80€",
-      "desc": "La tecnica solare che illumina il tuo viso. Sfumature naturali personalizzate per ogni carnagione.",
-      "popular": true
-    },
-    {
       "name": "Cheratina & Stiratura",
       "price": "da 120€",
       "desc": "Trattamento alla cheratina e stiratura permanente per un capello morbido, lucido e disciplinato per mesi.",
@@ -29,6 +23,12 @@
       "price": "da 150€",
       "desc": "Allungamento e infoltimento con extension naturali di prima qualità. Consulenza gratuita inclusa.",
       "popular": false
+    },
+    {
+      "name": "Balayage",
+      "price": "da 80€",
+      "desc": "La tecnica solare che illumina il tuo viso. Sfumature naturali personalizzate per ogni carnagione.",
+      "popular": true
     },
     {
       "name": "Permanente",
